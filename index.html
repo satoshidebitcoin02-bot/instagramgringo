@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Home Rescue Book — 50 Practical Home Fixes</title>
+  <meta name="description" content="50 practical solutions for everyday home problems — cleaning, stains, odors, kitchen, bathroom, laundry and home care.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--green:#164c3c;--green-2:#215d4b;--cream:#f7f4ee;--cream-2:#eee9df;--ink:#173b32;--muted:#6d756f;--line:#ddd9d0;--white:#fff;--gold:#c89b4b;}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;color:var(--ink);font-family:'DM Sans',Arial,sans-serif;background:#fff;line-height:1.55} img{display:block;max-width:100%} a{text-decoration:none;color:inherit}
+    .topline{height:3px;background:var(--green)}
+    .wrap{width:min(1080px,92%);margin:auto}
+    .hero{background:var(--cream);padding:70px 0 76px}
+    .hero-grid{display:grid;grid-template-columns:1fr 1.08fr;gap:58px;align-items:center}
+    .eyebrow{display:inline-block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--green-2);font-weight:700;margin-bottom:18px}
+    h1,h2,h3{font-family:'Libre Baskerville',Georgia,serif;line-height:1.12;margin:0 0 18px} h1{font-size:clamp(38px,5vw,62px);max-width:620px} h2{font-size:clamp(28px,3.5vw,42px)} h3{font-size:20px}
+    .hero p{font-size:18px;color:#5e665f;max-width:570px}.tags{font-size:13px;color:var(--green-2);font-weight:600;margin:22px 0}.price{font-size:30px;font-weight:800;margin:16px 0 20px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;background:var(--green);color:#fff;font-weight:800;padding:16px 24px;border-radius:8px;box-shadow:0 8px 22px rgba(22,76,60,.18);transition:.2s}.btn:hover{transform:translateY(-1px);background:#103d30}.sub{font-size:12px;color:#7b817d;margin-top:10px}
+    .hero-image{border-radius:10px;overflow:hidden;box-shadow:0 22px 50px rgba(37,44,38,.16)}
+    section{padding:82px 0}.center{text-align:center}.section-lead{max-width:700px;margin:0 auto 34px;color:var(--muted)}
+    .problem-section{background:#fff}.problem-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:760px;margin:30px auto 0}.problem-grid img{width:100%;border-radius:10px;border:1px solid var(--line)}
+    .product-section{background:var(--cream)}.product-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:70px;align-items:center}.product-image{max-width:510px;margin:auto;border-radius:8px;box-shadow:0 18px 45px rgba(30,45,38,.12)}
+    .checklist{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:25px 0}.check{background:#fff;border:1px solid #e2ded5;border-radius:8px;padding:10px 12px;font-size:14px}.check:before{content:'✓';font-weight:800;margin-right:8px;color:var(--green-2)}
+    .small-note{font-size:13px;color:var(--muted);font-style:italic}
+    .inside{background:#fff}.inside-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center;max-width:880px;margin:auto}.inside-card{background:var(--cream);border:1px solid var(--line);padding:25px;border-radius:10px}.inside-card h3{font-family:'DM Sans',Arial,sans-serif;font-size:18px}.inside-card p{color:var(--muted);font-size:14px}
+    .value{background:var(--cream)}.value-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:900px;margin:34px auto 0}.value-card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:28px;text-align:center}.icon{width:40px;height:40px;border-radius:50%;background:#e5eee9;display:grid;place-items:center;margin:0 auto 14px;color:var(--green);font-weight:800}
+    .guarantee{background:#fff;padding:55px 0}.guarantee-inner{max-width:900px;margin:auto;display:grid;grid-template-columns:300px 1fr;gap:45px;align-items:center}.guarantee-inner img{max-width:300px}
+    .faq{background:var(--cream)}.faq-list{max-width:720px;margin:35px auto 0;border-top:1px solid var(--line)}details{border-bottom:1px solid var(--line);padding:18px 4px}summary{cursor:pointer;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:20px}summary::-webkit-details-marker{display:none}summary:after{content:'+';font-weight:400}details[open] summary:after{content:'−'}details p{color:var(--muted);margin:12px 25px 0 0}
+    .final{background:var(--green);color:#fff;padding:76px 0}.final-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}.final h2{color:#fff}.final p{color:#d9e6df}.final .price{color:#fff}.final .btn{background:#2d725b}.final img{max-width:430px;margin:auto;border-radius:8px}
+    footer{background:#0e342a;color:#cbd8d2;text-align:center;padding:28px 0;font-size:12px}.footer-links{margin-top:8px;opacity:.8}
+    @media(max-width:800px){.hero-grid,.product-grid,.inside-grid,.guarantee-inner,.final-grid{grid-template-columns:1fr;gap:35px}.hero{padding:45px 0 55px}.hero-copy{order:1}.hero-image{order:2}.problem-grid{grid-template-columns:1fr 1fr}.value-grid{grid-template-columns:1fr}.guarantee-inner{justify-items:center;text-align:center}.final{text-align:center}.final img{max-width:360px}.checklist{grid-template-columns:1fr 1fr}}
+    @media(max-width:480px){section{padding:58px 0}.problem-grid{grid-template-columns:1fr}.checklist{grid-template-columns:1fr}h1{font-size:38px}.hero p{font-size:16px}}
+  </style>
+</head>
+<body>
+  <div class="topline"></div>
+
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <div class="eyebrow">THE HOME RESCUE BOOK</div>
+        <h1>50 Practical Home Fixes You’ll Wish You Knew Sooner</h1>
+        <p>Simple solutions for the everyday problems that make you stop and think, “How do I fix this?”</p>
+        <div class="tags">Cleaning • Stains • Odors • Kitchen • Bathroom • Laundry • Home Care</div>
+        <div class="price">Just $9.90</div>
+        <a class="btn" href="#checkout">GET THE HOME RESCUE BOOK — $9.90 →</a>
+        <div class="sub">One-time payment • Instant digital access • Read on your phone, tablet or computer</div>
+      </div>
+      <div class="hero-image"><img src="assets/hero-home-rescue.png" alt="The Home Rescue Book with practical home solutions"></div>
+    </div>
+  </header>
+
+  <section class="problem-section">
+    <div class="wrap center">
+      <h2>Your Home Has Problems. You Don’t Always Need a Professional.</h2>
+      <p class="section-lead">A stubborn stain. A strange smell. A dirty surface that never seems to come completely clean. A clogged sink. A kitchen mess that looks impossible. Before you spend money replacing something or calling someone to fix it, there may be a simple solution worth trying first.</p>
+      <div class="problem-grid"><img src="assets/problems-grid.png" alt="Six everyday home problems covered in the guide"></div>
+      <p style="margin-top:28px;font-weight:700">That’s exactly why I created The Home Rescue Book.</p>
+    </div>
+  </section>
+
+  <section class="product-section">
+    <div class="wrap product-grid">
+      <img class="product-image" src="assets/book-stack.png" alt="The Home Rescue Book and stacked copies">
+      <div>
+        <div class="eyebrow">A PRACTICAL REFERENCE GUIDE</div>
+        <h2>Meet The Home Rescue Book</h2>
+        <p>A practical collection of 50 simple home solutions designed to help you tackle the everyday problems that seem to keep coming back.</p>
+        <p>The goal is simple: open the book, find the problem, follow the steps, and get to work.</p>
+        <div class="checklist">
+          <div class="check">Cleaning solutions</div><div class="check">Stain removal</div>
+          <div class="check">Odor control</div><div class="check">Kitchen problems</div>
+          <div class="check">Bathroom cleaning</div><div class="check">Laundry fixes</div>
+          <div class="check">Everyday home care</div><div class="check">Simple household tricks</div>
+        </div>
+        <p class="small-note">No complicated lessons. No hours of research. Just practical solutions you can actually use.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="inside">
+    <div class="wrap center">
+      <h2>Everything You Need, Inside One Simple Guide</h2>
+      <p class="section-lead">A practical reference you can keep nearby and come back to whenever a household problem shows up.</p>
+      <div class="inside-grid">
+        <div class="inside-card">
+          <h3>The Home Rescue Book</h3>
+          <p><strong>50 Practical Home Solutions</strong></p>
+          <p>Digital PDF eBook • Instant Access</p>
+          <a class="btn" href="assets/The-Home-Rescue-Book.pdf" target="_blank" rel="noopener">Preview the PDF</a>
+        </div>
+        <img src="assets/tablet-preview.png" alt="The Home Rescue Book on a tablet and phone">
+      </div>
+    </div>
+  </section>
+
+  <section class="value">
+    <div class="wrap center">
+      <h2>A Simple Guide for Real-Life Home Problems</h2>
+      <p class="section-lead">Here’s what you can expect from The Home Rescue Book.</p>
+      <div class="value-grid">
+        <div class="value-card"><div class="icon">✓</div><h3>Quick Reference</h3><p>Find the problem, follow the steps, get it done. No fluff, no filler.</p></div>
+        <div class="value-card"><div class="icon">⌂</div><h3>Everyday Solutions</h3><p>Covers practical problems that actually show up in real homes.</p></div>
+        <div class="value-card"><div class="icon">$</div><h3>Low-Risk Purchase</h3><p>Get the digital guide for $9.90 with a 30-day money-back guarantee.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="guarantee">
+    <div class="wrap guarantee-inner">
+      <img src="assets/guarantee.png" alt="30-day money-back guarantee">
+      <div>
+        <h2>Try It for 30 Days — Risk Free</h2>
+        <p>Get your copy of The Home Rescue Book today. If you don’t find it useful for your home, you can request a refund within 30 days.</p>
+        <div style="font-weight:800;letter-spacing:.05em">30-DAY MONEY-BACK GUARANTEE</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq">
+    <div class="wrap">
+      <div class="center"><h2>Frequently Asked Questions</h2></div>
+      <div class="faq-list">
+        <details><summary>What is The Home Rescue Book?</summary><p>It’s a digital guide with 50 practical solutions for everyday home problems involving cleaning, stains, odors, kitchen, bathroom, laundry and general home care.</p></details>
+        <details><summary>How will I receive the book?</summary><p>You’ll receive digital access after purchase. The guide is provided as a PDF.</p></details>
+        <details><summary>Can I read it on my phone?</summary><p>Yes. The PDF can be read on a phone, tablet or computer.</p></details>
+        <details><summary>Is this a physical book?</summary><p>No. This is a digital PDF eBook.</p></details>
+        <details><summary>Do I need special products or equipment?</summary><p>The guide focuses on practical household solutions. Always follow product labels and test any cleaning method on a small, inconspicuous area first.</p></details>
+        <details><summary>What if I don’t like it?</summary><p>You can request a refund within 30 days under the money-back guarantee.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="final" id="checkout">
+    <div class="wrap final-grid">
+      <img src="assets/book-stack-alt.png" alt="The Home Rescue Book">
+      <div>
+        <div class="eyebrow" style="color:#b9d6ca">THE HOME RESCUE BOOK</div>
+        <h2>Keep The Home Rescue Book Handy.</h2>
+        <p>Because the next time something goes wrong at home, you’ll already have a practical place to look for a simple solution.</p>
+        <div class="price">$9.90</div>
+        <!-- Replace # with your real checkout URL -->
+        <a class="btn" href="#">GET THE HOME RESCUE BOOK — $9.90 →</a>
+        <div class="sub" style="color:#b9d6ca">One-time payment • Instant digital access • 30-Day Money-Back Guarantee</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <strong>The Home Rescue Book</strong>
+      <div>© 2026 The Home Rescue Book. All rights reserved.</div>
+      <div class="footer-links">Terms • Privacy • Refund Policy • Contact</div>
+    </div>
+  </footer>
+</body>
+</html>
