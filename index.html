@@ -13,16 +13,16 @@
     *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;color:var(--ink);font-family:'DM Sans',Arial,sans-serif;background:#fff;line-height:1.55} img{display:block;max-width:100%} a{text-decoration:none;color:inherit}
     .topline{height:3px;background:var(--green)}
     .wrap{width:min(1080px,92%);margin:auto}
-    .hero{background:var(--cream);padding:70px 0 76px}
+    .hero{background:var(--cream);padding:70px 0 76px;overflow:hidden}
     .hero-grid{display:grid;grid-template-columns:1fr 1.08fr;gap:58px;align-items:center}
     .eyebrow{display:inline-block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--green-2);font-weight:700;margin-bottom:18px}
     h1,h2,h3{font-family:'Libre Baskerville',Georgia,serif;line-height:1.12;margin:0 0 18px} h1{font-size:clamp(38px,5vw,62px);max-width:620px} h2{font-size:clamp(28px,3.5vw,42px)} h3{font-size:20px}
     .hero p{font-size:18px;color:#5e665f;max-width:570px}.tags{font-size:13px;color:var(--green-2);font-weight:600;margin:22px 0}.price{font-size:30px;font-weight:800;margin:16px 0 20px}
-    .btn{display:inline-flex;align-items:center;justify-content:center;background:var(--green);color:#fff;font-weight:800;padding:16px 24px;border-radius:8px;box-shadow:0 8px 22px rgba(22,76,60,.18);transition:.2s}.btn:hover{transform:translateY(-1px);background:#103d30}.sub{font-size:12px;color:#7b817d;margin-top:10px}
-    .hero-image{border-radius:10px;overflow:hidden;box-shadow:0 22px 50px rgba(37,44,38,.16)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;background:var(--green);color:#fff;font-weight:800;padding:16px 24px;border-radius:8px;box-shadow:0 8px 22px rgba(22,76,60,.18);transition:.2s;animation:softPulse 2.8s ease-in-out infinite}.btn:hover{transform:translateY(-1px);background:#103d30;animation-play-state:paused}.sub{font-size:12px;color:#7b817d;margin-top:10px}@keyframes softPulse{0%,100%{transform:scale(1);box-shadow:0 8px 22px rgba(22,76,60,.18)}50%{transform:scale(1.018);box-shadow:0 10px 26px rgba(22,76,60,.23)}}
+    .hero-image{border-radius:10px;overflow:hidden;box-shadow:0 22px 50px rgba(37,44,38,.16);min-width:0}.hero-image img{width:100%;height:auto}.hero-image-mobile{display:none}
     section{padding:82px 0}.center{text-align:center}.section-lead{max-width:700px;margin:0 auto 34px;color:var(--muted)}
     .problem-section{background:#fff}.problem-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:760px;margin:30px auto 0}.problem-grid img{width:100%;border-radius:10px;border:1px solid var(--line)}
-    .product-section{background:var(--cream)}.product-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:70px;align-items:center}.product-image{max-width:510px;margin:auto;border-radius:8px;box-shadow:0 18px 45px rgba(30,45,38,.12)}
+    .product-section{background:var(--cream)}.product-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:70px;align-items:center}.product-image{max-width:510px;margin:22px auto 28px;border-radius:8px;box-shadow:0 18px 45px rgba(30,45,38,.12)}
     .checklist{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:25px 0}.check{background:#fff;border:1px solid #e2ded5;border-radius:8px;padding:10px 12px;font-size:14px}.check:before{content:'✓';font-weight:800;margin-right:8px;color:var(--green-2)}
     .small-note{font-size:13px;color:var(--muted);font-style:italic}
     .inside{background:#fff}.inside-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center;max-width:880px;margin:auto}.inside-card{background:var(--cream);border:1px solid var(--line);padding:25px;border-radius:10px}.inside-card h3{font-family:'DM Sans',Arial,sans-serif;font-size:18px}.inside-card p{color:var(--muted);font-size:14px}
@@ -31,8 +31,9 @@
     .faq{background:var(--cream)}.faq-list{max-width:720px;margin:35px auto 0;border-top:1px solid var(--line)}details{border-bottom:1px solid var(--line);padding:18px 4px}summary{cursor:pointer;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:20px}summary::-webkit-details-marker{display:none}summary:after{content:'+';font-weight:400}details[open] summary:after{content:'−'}details p{color:var(--muted);margin:12px 25px 0 0}
     .final{background:var(--green);color:#fff;padding:76px 0}.final-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}.final h2{color:#fff}.final p{color:#d9e6df}.final .price{color:#fff}.final .btn{background:#2d725b}.final img{max-width:430px;margin:auto;border-radius:8px}
     footer{background:#0e342a;color:#cbd8d2;text-align:center;padding:28px 0;font-size:12px}.footer-links{margin-top:8px;opacity:.8}
-    @media(max-width:800px){.hero-grid,.product-grid,.inside-grid,.guarantee-inner,.final-grid{grid-template-columns:1fr;gap:35px}.hero{padding:45px 0 55px}.hero-copy{order:1}.hero-image{order:2}.problem-grid{grid-template-columns:1fr 1fr}.value-grid{grid-template-columns:1fr}.guarantee-inner{justify-items:center;text-align:center}.final{text-align:center}.final img{max-width:360px}.checklist{grid-template-columns:1fr 1fr}}
-    @media(max-width:480px){section{padding:58px 0}.problem-grid{grid-template-columns:1fr}.checklist{grid-template-columns:1fr}h1{font-size:38px}.hero p{font-size:16px}}
+    @media(max-width:800px){.hero-image-desktop{display:none}
+.hero-grid,.product-grid,.inside-grid,.guarantee-inner,.final-grid{grid-template-columns:1fr;gap:35px}.hero{padding:45px 0 55px}.hero-grid{min-width:0}.hero-copy{order:1;min-width:0}.hero-image-desktop{order:2;min-width:0}.hero-image-mobile{display:block;order:2;margin:8px 0 18px}.hero-copy .btn{order:3}.problem-grid{grid-template-columns:1fr 1fr}.value-grid{grid-template-columns:1fr}.guarantee-inner{justify-items:center;text-align:center}.guarantee-inner div{order:1}.guarantee-inner img{order:2}.final{text-align:center}.final-grid>div{order:1}.final-grid>img{order:2}.final img{max-width:360px}.checklist{grid-template-columns:1fr 1fr}}
+    @media(max-width:480px){section{padding:58px 0}.problem-grid{grid-template-columns:1fr}.checklist{grid-template-columns:1fr}h1{font-size:38px}.hero p{font-size:16px}.hero-grid{width:min(1080px,92%);margin:0 auto}.hero-copy{width:100%;overflow:hidden}.hero-copy .btn{width:100%;max-width:100%;white-space:normal}.hero-image-mobile{width:100%;max-width:100%;}.hero-image-desktop{display:none}}
   </style>
 </head>
 <body>
@@ -45,11 +46,10 @@
         <h1>50 Practical Home Fixes You’ll Wish You Knew Sooner</h1>
         <p>Simple solutions for the everyday problems that make you stop and think, “How do I fix this?”</p>
         <div class="tags">Cleaning • Stains • Odors • Kitchen • Bathroom • Laundry • Home Care</div>
-        <div class="price">Just $9.90</div>
-        <a class="btn" href="#checkout">GET THE HOME RESCUE BOOK — $9.90 →</a>
-        <div class="sub">One-time payment • Instant digital access • Read on your phone, tablet or computer</div>
+        <div class="hero-image hero-image-mobile"><img src="assets/hero-home-rescue.png" alt="The Home Rescue Book with practical home solutions"></div>
+        <a class="btn" href="#checkout">GET THE HOME RESCUE BOOK $9.90</a>
       </div>
-      <div class="hero-image"><img src="assets/hero-home-rescue.png" alt="The Home Rescue Book with practical home solutions"></div>
+      <div class="hero-image hero-image-desktop"><img src="assets/hero-home-rescue.png" alt="The Home Rescue Book with practical home solutions"></div>
     </div>
   </header>
 
@@ -64,10 +64,10 @@
 
   <section class="product-section">
     <div class="wrap product-grid">
-      <img class="product-image" src="assets/book-stack.png" alt="The Home Rescue Book and stacked copies">
       <div>
         <div class="eyebrow">A PRACTICAL REFERENCE GUIDE</div>
         <h2>Meet The Home Rescue Book</h2>
+        <img class="product-image product-image-inline" src="assets/book-stack.png" alt="The Home Rescue Book and stacked copies">
         <p>A practical collection of 50 simple home solutions designed to help you tackle the everyday problems that seem to keep coming back.</p>
         <p>The goal is simple: open the book, find the problem, follow the steps, and get to work.</p>
         <div class="checklist">
@@ -90,7 +90,6 @@
           <h3>The Home Rescue Book</h3>
           <p><strong>50 Practical Home Solutions</strong></p>
           <p>Digital PDF eBook • Instant Access</p>
-          <a class="btn" href="assets/The-Home-Rescue-Book.pdf" target="_blank" rel="noopener">Preview the PDF</a>
         </div>
         <img src="assets/tablet-preview.png" alt="The Home Rescue Book on a tablet and phone">
       </div>
@@ -113,7 +112,7 @@
     <div class="wrap guarantee-inner">
       <img src="assets/guarantee.png" alt="30-day money-back guarantee">
       <div>
-        <h2>Try It for 30 Days — Risk Free</h2>
+        <h2>Try It for 30 Days Risk Free</h2>
         <p>Get your copy of The Home Rescue Book today. If you don’t find it useful for your home, you can request a refund within 30 days.</p>
         <div style="font-weight:800;letter-spacing:.05em">30-DAY MONEY-BACK GUARANTEE</div>
       </div>
@@ -143,8 +142,7 @@
         <p>Because the next time something goes wrong at home, you’ll already have a practical place to look for a simple solution.</p>
         <div class="price">$9.90</div>
         <!-- Replace # with your real checkout URL -->
-        <a class="btn" href="#">GET THE HOME RESCUE BOOK — $9.90 →</a>
-        <div class="sub" style="color:#b9d6ca">One-time payment • Instant digital access • 30-Day Money-Back Guarantee</div>
+        <a class="btn" href="#">GET THE HOME RESCUE BOOK $9.90</a>
       </div>
     </div>
   </section>
