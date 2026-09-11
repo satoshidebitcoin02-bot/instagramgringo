@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>The Home Rescue Book — 50 Practical Home Fixes</title>
   <meta name="description" content="50 practical solutions for everyday home problems — cleaning, stains, odors, kitchen, bathroom, laundry and home care.">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
@@ -20,37 +19,32 @@
       --muted:#6d756f;
       --line:#ddd9d0;
       --white:#fff;
+      --gold:#c89b4b;
     }
 
-    /* RESET */
-    *,
-    *::before,
-    *::after{
+    *{
       box-sizing:border-box;
     }
 
     html{
       scroll-behavior:smooth;
-      width:100%;
-      max-width:100%;
       overflow-x:hidden;
     }
 
     body{
       margin:0;
-      width:100%;
-      max-width:100%;
-      overflow-x:hidden;
       color:var(--ink);
       font-family:'DM Sans',Arial,sans-serif;
       background:#fff;
       line-height:1.55;
+      overflow-x:hidden;
+      width:100%;
+      max-width:100%;
     }
 
     img{
       display:block;
       max-width:100%;
-      width:auto;
       height:auto;
     }
 
@@ -61,75 +55,27 @@
 
     .topline{
       height:3px;
-      width:100%;
       background:var(--green);
+      width:100%;
     }
 
     .wrap{
       width:min(1080px,92%);
-      max-width:1080px;
-      margin:0 auto;
+      margin:auto;
     }
 
-    /* TYPOGRAPHY */
-
-    h1,
-    h2,
-    h3{
-      font-family:'Libre Baskerville',Georgia,serif;
-      line-height:1.12;
-      margin:0 0 18px;
-      max-width:100%;
+    .hero{
+      background:var(--cream);
+      padding:70px 0 76px;
+      overflow:hidden;
+      width:100%;
     }
 
-    h1{
-      font-size:clamp(38px,5vw,62px);
-    }
-
-    h2{
-      font-size:clamp(28px,3.5vw,42px);
-    }
-
-    h3{
-      font-size:20px;
-    }
-
-    /* BUTTON */
-
-    .btn{
-      display:inline-flex;
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1fr 1.08fr;
+      gap:58px;
       align-items:center;
-      justify-content:center;
-      width:auto;
-      max-width:100%;
-      background:var(--green);
-      color:#fff;
-      font-weight:800;
-      padding:16px 24px;
-      border-radius:8px;
-      box-shadow:0 8px 22px rgba(22,76,60,.18);
-      transition:transform .2s ease,background .2s ease,box-shadow .2s ease;
-      animation:softPulse 2.8s ease-in-out infinite;
-      text-align:center;
-      cursor:pointer;
-    }
-
-    .btn:hover{
-      transform:translateY(-1px);
-      background:#103d30;
-      animation-play-state:paused;
-    }
-
-    @keyframes softPulse{
-      0%,100%{
-        transform:scale(1);
-        box-shadow:0 8px 22px rgba(22,76,60,.18);
-      }
-
-      50%{
-        transform:scale(1.018);
-        box-shadow:0 10px 26px rgba(22,76,60,.23);
-      }
     }
 
     .eyebrow{
@@ -142,27 +88,25 @@
       margin-bottom:18px;
     }
 
-    /* HERO */
-
-    .hero{
-      background:var(--cream);
-      padding:70px 0 76px;
-      width:100%;
-      overflow:hidden;
+    h1,
+    h2,
+    h3{
+      font-family:'Libre Baskerville',Georgia,serif;
+      line-height:1.12;
+      margin:0 0 18px;
     }
 
-    .hero-grid{
-      display:grid;
-      grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);
-      gap:58px;
-      align-items:center;
-      width:100%;
-      min-width:0;
+    h1{
+      font-size:clamp(38px,5vw,62px);
+      max-width:620px;
     }
 
-    .hero-copy{
-      min-width:0;
-      width:100%;
+    h2{
+      font-size:clamp(28px,3.5vw,42px);
+    }
+
+    h3{
+      font-size:20px;
     }
 
     .hero p{
@@ -178,33 +122,69 @@
       margin:22px 0;
     }
 
+    .price{
+      font-size:30px;
+      font-weight:800;
+      margin:16px 0 20px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      background:var(--green);
+      color:#fff;
+      font-weight:800;
+      padding:16px 24px;
+      border-radius:8px;
+      box-shadow:0 8px 22px rgba(22,76,60,.18);
+      transition:.2s;
+      animation:softPulse 2.8s ease-in-out infinite;
+    }
+
+    .btn:hover{
+      transform:translateY(-1px);
+      background:#103d30;
+      animation-play-state:paused;
+    }
+
+    .sub{
+      font-size:12px;
+      color:#7b817d;
+      margin-top:10px;
+    }
+
+    @keyframes softPulse{
+      0%,100%{
+        transform:scale(1);
+        box-shadow:0 8px 22px rgba(22,76,60,.18);
+      }
+
+      50%{
+        transform:scale(1.018);
+        box-shadow:0 10px 26px rgba(22,76,60,.23);
+      }
+    }
+
     .hero-image{
-      width:100%;
-      min-width:0;
-      max-width:100%;
       border-radius:10px;
       overflow:hidden;
       box-shadow:0 22px 50px rgba(37,44,38,.16);
+      min-width:0;
     }
 
     .hero-image img{
-      display:block;
       width:100%;
-      max-width:100%;
       height:auto;
-      object-fit:cover;
     }
 
     .hero-image-mobile{
       display:none;
     }
 
-    /* SECTIONS */
-
     section{
-      width:100%;
-      max-width:100%;
       padding:82px 0;
+      width:100%;
       overflow:hidden;
     }
 
@@ -218,15 +198,13 @@
       color:var(--muted);
     }
 
-    /* PROBLEMS */
-
     .problem-section{
       background:#fff;
     }
 
     .problem-grid{
       display:grid;
-      grid-template-columns:minmax(0,1fr);
+      grid-template-columns:repeat(3,1fr);
       gap:16px;
       max-width:760px;
       margin:30px auto 0;
@@ -234,13 +212,9 @@
 
     .problem-grid img{
       width:100%;
-      max-width:100%;
-      height:auto;
       border-radius:10px;
       border:1px solid var(--line);
     }
-
-    /* PRODUCT */
 
     .product-section{
       background:var(--cream);
@@ -248,23 +222,13 @@
 
     .product-grid{
       display:grid;
-      grid-template-columns:minmax(0,1fr);
-      gap:30px;
-      align-items:start;
-      max-width:900px;
-      margin:0 auto;
-    }
-
-    .product-grid > div{
-      min-width:0;
-      width:100%;
+      grid-template-columns:.95fr 1.05fr;
+      gap:70px;
+      align-items:center;
     }
 
     .product-image{
-      display:block;
-      width:100%;
       max-width:510px;
-      height:auto;
       margin:22px auto 28px;
       border-radius:8px;
       box-shadow:0 18px 45px rgba(30,45,38,.12);
@@ -272,7 +236,7 @@
 
     .checklist{
       display:grid;
-      grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+      grid-template-columns:1fr 1fr;
       gap:10px;
       margin:25px 0;
     }
@@ -283,7 +247,6 @@
       border-radius:8px;
       padding:10px 12px;
       font-size:14px;
-      min-width:0;
     }
 
     .check:before{
@@ -299,19 +262,17 @@
       font-style:italic;
     }
 
-    /* INSIDE */
-
     .inside{
       background:#fff;
     }
 
     .inside-grid{
       display:grid;
-      grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+      grid-template-columns:1fr 1fr;
       gap:30px;
       align-items:center;
       max-width:880px;
-      margin:0 auto;
+      margin:auto;
     }
 
     .inside-card{
@@ -319,7 +280,6 @@
       border:1px solid var(--line);
       padding:25px;
       border-radius:10px;
-      min-width:0;
     }
 
     .inside-card h3{
@@ -333,13 +293,9 @@
     }
 
     .inside-grid > img{
-      width:100%;
+      margin:auto;
       max-width:100%;
-      height:auto;
-      border-radius:8px;
     }
-
-    /* VALUE */
 
     .value{
       background:var(--cream);
@@ -347,7 +303,7 @@
 
     .value-grid{
       display:grid;
-      grid-template-columns:repeat(3,minmax(0,1fr));
+      grid-template-columns:repeat(3,1fr);
       gap:18px;
       max-width:900px;
       margin:34px auto 0;
@@ -359,7 +315,6 @@
       border-radius:10px;
       padding:28px;
       text-align:center;
-      min-width:0;
     }
 
     .icon{
@@ -374,41 +329,29 @@
       font-weight:800;
     }
 
-    /* GUARANTEE */
-
     .guarantee{
       background:#fff;
-      padding:65px 0;
+      padding:55px 0;
     }
 
     .guarantee-inner{
       max-width:900px;
       margin:auto;
       display:grid;
-      grid-template-columns:minmax(0,300px) minmax(0,1fr);
+      grid-template-columns:300px 1fr;
       gap:45px;
       align-items:center;
     }
 
-    .guarantee-inner > div{
-      min-width:0;
-    }
-
     .guarantee-inner img{
-      width:100%;
       max-width:300px;
-      height:auto;
-      margin:0 auto;
     }
-
-    /* FAQ */
 
     .faq{
       background:var(--cream);
     }
 
     .faq-list{
-      width:100%;
       max-width:720px;
       margin:35px auto 0;
       border-top:1px solid var(--line);
@@ -425,7 +368,6 @@
       list-style:none;
       display:flex;
       justify-content:space-between;
-      align-items:center;
       gap:20px;
     }
 
@@ -436,7 +378,6 @@
     summary:after{
       content:'+';
       font-weight:400;
-      flex-shrink:0;
     }
 
     details[open] summary:after{
@@ -448,8 +389,6 @@
       margin:12px 25px 0 0;
     }
 
-    /* FINAL */
-
     .final{
       background:var(--green);
       color:#fff;
@@ -458,13 +397,9 @@
 
     .final-grid{
       display:grid;
-      grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+      grid-template-columns:1fr 1fr;
       gap:60px;
       align-items:center;
-    }
-
-    .final-grid > div{
-      min-width:0;
     }
 
     .final h2{
@@ -477,9 +412,6 @@
 
     .final .price{
       color:#fff;
-      font-size:30px;
-      font-weight:800;
-      margin:16px 0 20px;
     }
 
     .final .btn{
@@ -487,17 +419,12 @@
     }
 
     .final img{
-      width:100%;
       max-width:430px;
-      height:auto;
-      margin:0 auto;
+      margin:auto;
       border-radius:8px;
     }
 
-    /* FOOTER */
-
     footer{
-      width:100%;
       background:#0e342a;
       color:#cbd8d2;
       text-align:center;
@@ -511,37 +438,92 @@
     }
 
     /* =========================================
-       TABLET
+       TABLET / MOBILE
        ========================================= */
 
     @media(max-width:800px){
 
+      /* Prevent horizontal movement */
+      html,
+      body{
+        width:100%;
+        max-width:100%;
+        overflow-x:hidden;
+      }
+
       .wrap{
-        width:92%;
-        max-width:92%;
+        width:calc(100% - 32px);
+        max-width:100%;
+        margin-left:auto;
+        margin-right:auto;
+      }
+
+      /* Everything centered on mobile */
+      .hero,
+      section,
+      .final,
+      footer{
+        text-align:center;
       }
 
       .hero{
         padding:45px 0 55px;
+        overflow:hidden;
+      }
+
+      .hero-grid,
+      .product-grid,
+      .inside-grid,
+      .guarantee-inner,
+      .final-grid{
+        grid-template-columns:1fr;
+        gap:35px;
+        width:100%;
+        max-width:100%;
       }
 
       .hero-grid{
-        display:block;
-        width:100%;
         min-width:0;
+        margin-left:auto;
+        margin-right:auto;
       }
 
       .hero-copy{
+        order:1;
+        min-width:0;
         width:100%;
         max-width:100%;
-        min-width:0;
+        text-align:center;
       }
 
-      /*
-        MOBILE:
-        imagem fica abaixo do conteúdo do título
-        e antes do botão.
-      */
+      .hero-copy .eyebrow{
+        display:block;
+        text-align:center;
+      }
+
+      h1,
+      h2,
+      h3{
+        margin-left:auto;
+        margin-right:auto;
+        text-align:center;
+      }
+
+      h1{
+        max-width:100%;
+      }
+
+      .hero p{
+        max-width:100%;
+        margin-left:auto;
+        margin-right:auto;
+        text-align:center;
+      }
+
+      .tags{
+        text-align:center;
+        max-width:100%;
+      }
 
       .hero-image-desktop{
         display:none;
@@ -549,87 +531,170 @@
 
       .hero-image-mobile{
         display:block;
+        order:2;
         width:100%;
         max-width:100%;
-        margin:24px 0 24px;
+        margin:8px auto 18px;
       }
 
       .hero-image-mobile img{
         width:100%;
         max-width:100%;
+        height:auto;
+        margin:0 auto;
       }
 
       .hero-copy .btn{
+        order:3;
         display:flex;
         width:100%;
         max-width:100%;
+        margin:0 auto;
+        text-align:center;
+        white-space:normal;
+      }
+
+      .section-lead{
+        max-width:100%;
+        margin-left:auto;
+        margin-right:auto;
+        text-align:center;
+      }
+
+      .problem-grid{
+        grid-template-columns:1fr 1fr;
+        width:100%;
+        max-width:100%;
+        margin-left:auto;
+        margin-right:auto;
+      }
+
+      .problem-grid img{
+        width:100%;
+        max-width:100%;
+        margin:auto;
+      }
+
+      .product-section{
+        text-align:center;
       }
 
       .product-grid{
+        text-align:center;
+      }
+
+      .product-grid > div{
+        width:100%;
+        max-width:100%;
+        margin:auto;
+        text-align:center;
+      }
+
+      .product-grid .eyebrow{
+        display:block;
+        text-align:center;
+      }
+
+      .product-image{
+        width:100%;
+        max-width:510px;
+        margin:22px auto 28px;
+      }
+
+      .checklist{
+        grid-template-columns:1fr 1fr;
         width:100%;
         max-width:100%;
       }
 
-      .inside-grid{
-        grid-template-columns:minmax(0,1fr);
-        gap:25px;
-        width:100%;
+      .check{
+        text-align:center;
       }
 
-      /*
-        Título → imagem → conteúdo
-      */
+      .small-note{
+        text-align:center;
+      }
 
-      .inside-grid > img{
-        order:1;
+      .inside{
+        text-align:center;
+      }
+
+      .inside-grid{
         width:100%;
         max-width:100%;
       }
 
       .inside-card{
-        order:2;
+        width:100%;
+        max-width:100%;
+        text-align:center;
+      }
+
+      .inside-grid > img{
+        width:100%;
+        max-width:100%;
+        height:auto;
+        margin:0 auto;
       }
 
       .value-grid{
-        grid-template-columns:minmax(0,1fr);
+        grid-template-columns:1fr;
         width:100%;
+        max-width:500px;
+        margin-left:auto;
+        margin-right:auto;
       }
 
-      .guarantee-inner{
-        grid-template-columns:minmax(0,1fr);
-        gap:25px;
+      .value-card{
+        width:100%;
         text-align:center;
-        width:100%;
       }
 
-      /*
-        No mobile:
-        título → imagem → texto
-      */
-
       .guarantee-inner{
-        display:flex;
-        flex-direction:column;
+        justify-items:center;
+        text-align:center;
       }
 
       .guarantee-inner > div{
-        display:contents;
-      }
-
-      .guarantee-inner h2{
         order:1;
+        width:100%;
+        max-width:100%;
+        text-align:center;
       }
 
       .guarantee-inner img{
         order:2;
+        width:100%;
+        max-width:300px;
+        margin:0 auto;
       }
 
-      .guarantee-inner p{
-        order:3;
+      .faq{
+        text-align:center;
       }
 
-      .guarantee-inner div > div{
-        order:4;
+      .faq-list{
+        width:100%;
+        max-width:720px;
+        margin-left:auto;
+        margin-right:auto;
+        text-align:center;
+      }
+
+      summary{
+        justify-content:center;
+        align-items:center;
+        text-align:center;
+        gap:12px;
+      }
+
+      summary:after{
+        flex-shrink:0;
+      }
+
+      details p{
+        margin:12px auto 0;
+        text-align:center;
       }
 
       .final{
@@ -637,208 +702,169 @@
       }
 
       .final-grid{
-        grid-template-columns:minmax(0,1fr);
-        gap:35px;
-        width:100%;
-      }
-
-      /*
-        No mobile:
-        título → imagem → texto
-      */
-
-      .final-grid{
-        display:flex;
-        flex-direction:column;
+        text-align:center;
       }
 
       .final-grid > div{
-        display:contents;
-      }
-
-      .final-grid .eyebrow{
         order:1;
-      }
-
-      .final-grid h2{
-        order:2;
+        width:100%;
+        max-width:100%;
+        text-align:center;
       }
 
       .final-grid > img{
-        order:3;
+        order:2;
         width:100%;
         max-width:360px;
+        margin:0 auto;
       }
 
-      .final-grid p{
-        order:4;
+      .final .eyebrow{
+        display:block;
+        text-align:center;
       }
 
-      .final-grid .price{
-        order:5;
+      .final .btn{
+        display:flex;
+        width:100%;
+        max-width:100%;
+        margin:0 auto;
+        text-align:center;
       }
 
-      .final-grid .btn{
-        order:6;
-      }
-
-      .checklist{
-        grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+      footer{
+        text-align:center;
       }
     }
 
     /* =========================================
-       MOBILE
+       SMALL MOBILE
        ========================================= */
 
     @media(max-width:480px){
 
-      html,
-      body{
-        width:100%;
-        max-width:100%;
-        overflow-x:hidden !important;
+      section{
+        padding:58px 0;
       }
 
       .wrap{
-        width:calc(100% - 32px);
-        max-width:calc(100% - 32px);
-        margin-left:auto;
-        margin-right:auto;
-      }
-
-      section{
-        padding:58px 0;
-        width:100%;
+        width:calc(100% - 24px);
         max-width:100%;
-        overflow:hidden;
-      }
-
-      .hero{
-        width:100%;
-        max-width:100%;
-        padding:40px 0 50px;
-        overflow:hidden;
       }
 
       .hero-grid{
         width:100%;
         max-width:100%;
-        margin:0;
+        margin:0 auto;
       }
 
       .hero-copy{
         width:100%;
         max-width:100%;
         overflow:visible;
+        text-align:center;
       }
 
-      .eyebrow{
-        font-size:10px;
-        letter-spacing:.14em;
+      .hero-copy .eyebrow{
+        text-align:center;
       }
 
       h1{
-        font-size:36px;
-        line-height:1.08;
-        overflow-wrap:break-word;
-        word-break:normal;
+        font-size:38px;
+        max-width:100%;
+        text-align:center;
       }
 
       h2{
-        font-size:28px;
-        overflow-wrap:break-word;
+        max-width:100%;
+        text-align:center;
       }
 
       h3{
-        font-size:19px;
+        text-align:center;
       }
 
       .hero p{
         font-size:16px;
+        width:100%;
         max-width:100%;
+        text-align:center;
       }
 
       .tags{
-        font-size:12px;
-        line-height:1.6;
+        width:100%;
         max-width:100%;
+        text-align:center;
       }
 
       .hero-image-mobile{
         width:100%;
         max-width:100%;
-        margin:22px 0 22px;
-        border-radius:8px;
+        margin:8px auto 18px;
+        overflow:hidden;
       }
 
       .hero-image-mobile img{
         width:100%;
         max-width:100%;
         height:auto;
+        margin:0 auto;
       }
 
       .hero-copy .btn{
         width:100%;
         max-width:100%;
-        padding:16px 18px;
-        font-size:14px;
+        margin-left:auto;
+        margin-right:auto;
         white-space:normal;
-      }
-
-      .section-lead{
-        font-size:14px;
-        max-width:100%;
+        text-align:center;
       }
 
       .problem-grid{
+        grid-template-columns:1fr;
         width:100%;
         max-width:100%;
-        margin-top:25px;
+        margin-left:auto;
+        margin-right:auto;
       }
 
       .problem-grid img{
         width:100%;
         max-width:100%;
+        margin:0 auto;
       }
 
-      .product-grid{
+      .checklist{
+        grid-template-columns:1fr;
         width:100%;
         max-width:100%;
+        margin-left:auto;
+        margin-right:auto;
+      }
+
+      .check{
+        width:100%;
+        text-align:center;
       }
 
       .product-image{
         width:100%;
         max-width:100%;
-        margin:20px auto 25px;
-      }
-
-      .checklist{
-        grid-template-columns:minmax(0,1fr);
-        width:100%;
-        max-width:100%;
-      }
-
-      .check{
-        width:100%;
-        max-width:100%;
-        font-size:13px;
-      }
-
-      .inside-grid{
-        width:100%;
-        max-width:100%;
-        grid-template-columns:minmax(0,1fr);
-      }
-
-      .inside-grid > img{
-        width:100%;
-        max-width:100%;
+        margin-left:auto;
+        margin-right:auto;
       }
 
       .inside-card{
         width:100%;
         max-width:100%;
+        text-align:center;
+      }
+
+      .inside-grid > img{
+        width:100%;
+        max-width:100%;
+        margin-left:auto;
+        margin-right:auto;
       }
 
       .value-grid{
@@ -859,6 +885,7 @@
       .guarantee-inner img{
         width:100%;
         max-width:300px;
+        margin:0 auto;
       }
 
       .faq-list{
@@ -866,24 +893,14 @@
         max-width:100%;
       }
 
-      details{
-        width:100%;
-        max-width:100%;
-      }
-
       summary{
-        font-size:14px;
+        width:100%;
+        text-align:center;
       }
 
       details p{
-        font-size:13px;
-      }
-
-      .final{
-        width:100%;
+        text-align:center;
         max-width:100%;
-        padding:60px 0;
-        overflow:hidden;
       }
 
       .final-grid{
@@ -893,17 +910,18 @@
 
       .final-grid > img{
         width:100%;
-        max-width:330px;
+        max-width:360px;
+        margin:0 auto;
       }
 
       .final .btn{
         width:100%;
         max-width:100%;
+        margin:0 auto;
       }
 
       footer{
-        width:100%;
-        max-width:100%;
+        text-align:center;
       }
     }
   </style>
@@ -913,12 +931,7 @@
 
   <div class="topline"></div>
 
-  <!-- =========================
-       HERO
-       ========================= -->
-
   <header class="hero">
-
     <div class="wrap hero-grid">
 
       <div class="hero-copy">
@@ -940,7 +953,6 @@
           Cleaning • Stains • Odors • Kitchen • Bathroom • Laundry • Home Care
         </div>
 
-        <!-- MOBILE HERO IMAGE -->
         <div class="hero-image hero-image-mobile">
           <img
             src="assets/hero-home-rescue.png"
@@ -954,7 +966,6 @@
 
       </div>
 
-      <!-- DESKTOP HERO IMAGE -->
       <div class="hero-image hero-image-desktop">
         <img
           src="assets/hero-home-rescue.png"
@@ -963,13 +974,8 @@
       </div>
 
     </div>
-
   </header>
 
-
-  <!-- =========================
-       PROBLEMS
-       ========================= -->
 
   <section class="problem-section">
 
@@ -979,22 +985,19 @@
         Your Home Has Problems. You Don’t Always Need a Professional.
       </h2>
 
-      <!-- IMAGE DIRECTLY BELOW SECTION TITLE -->
+      <p class="section-lead">
+        A stubborn stain. A strange smell. A dirty surface that never seems to
+        come completely clean. A clogged sink. A kitchen mess that looks impossible.
+        Before you spend money replacing something or calling someone to fix it,
+        there may be a simple solution worth trying first.
+      </p>
+
       <div class="problem-grid">
         <img
           src="assets/problems-grid.png"
           alt="Six everyday home problems covered in the guide"
         >
       </div>
-
-      <p class="section-lead">
-        A stubborn stain. A strange smell. A dirty surface that never seems
-        to come completely clean. A clogged sink. A kitchen mess that looks
-        impossible.
-
-        Before you spend money replacing something or calling someone to fix it,
-        there may be a simple solution worth trying first.
-      </p>
 
       <p style="margin-top:28px;font-weight:700">
         That’s exactly why I created The Home Rescue Book.
@@ -1004,10 +1007,6 @@
 
   </section>
 
-
-  <!-- =========================
-       PRODUCT
-       ========================= -->
 
   <section class="product-section">
 
@@ -1023,9 +1022,8 @@
           Meet The Home Rescue Book
         </h2>
 
-        <!-- IMAGE BELOW TITLE -->
         <img
-          class="product-image"
+          class="product-image product-image-inline"
           src="assets/book-stack.png"
           alt="The Home Rescue Book and stacked copies"
         >
@@ -1077,8 +1075,8 @@
         </div>
 
         <p class="small-note">
-          No complicated lessons. No hours of research.
-          Just practical solutions you can actually use.
+          No complicated lessons. No hours of research. Just practical solutions
+          you can actually use.
         </p>
 
       </div>
@@ -1088,10 +1086,6 @@
   </section>
 
 
-  <!-- =========================
-       INSIDE
-       ========================= -->
-
   <section class="inside">
 
     <div class="wrap center">
@@ -1100,13 +1094,12 @@
         Everything You Need, Inside One Simple Guide
       </h2>
 
-      <!-- IMAGE BELOW TITLE -->
-      <div class="inside-grid">
+      <p class="section-lead">
+        A practical reference you can keep nearby and come back to whenever
+        a household problem shows up.
+      </p>
 
-        <img
-          src="assets/tablet-preview.png"
-          alt="The Home Rescue Book displayed on a tablet and phone"
-        >
+      <div class="inside-grid">
 
         <div class="inside-card">
 
@@ -1124,21 +1117,17 @@
 
         </div>
 
-      </div>
+        <img
+          src="assets/tablet-preview.png"
+          alt="The Home Rescue Book on a tablet and phone"
+        >
 
-      <p class="section-lead" style="margin-top:28px">
-        You’ll get a practical reference guide you can keep nearby and come
-        back to whenever a household problem shows up.
-      </p>
+      </div>
 
     </div>
 
   </section>
 
-
-  <!-- =========================
-       VALUE
-       ========================= -->
 
   <section class="value">
 
@@ -1212,13 +1201,14 @@
   </section>
 
 
-  <!-- =========================
-       GUARANTEE
-       ========================= -->
-
   <section class="guarantee">
 
     <div class="wrap guarantee-inner">
+
+      <img
+        src="assets/guarantee.png"
+        alt="30-day money-back guarantee"
+      >
 
       <div>
 
@@ -1227,9 +1217,8 @@
         </h2>
 
         <p>
-          Get your copy of The Home Rescue Book today.
-          If you don’t find it useful for your home,
-          you can request a refund within 30 days.
+          Get your copy of The Home Rescue Book today. If you don’t find it
+          useful for your home, you can request a refund within 30 days.
         </p>
 
         <div style="font-weight:800;letter-spacing:.05em">
@@ -1238,20 +1227,10 @@
 
       </div>
 
-      <!-- IMAGE -->
-      <img
-        src="assets/guarantee.png"
-        alt="30-day money-back guarantee"
-      >
-
     </div>
 
   </section>
 
-
-  <!-- =========================
-       FAQ
-       ========================= -->
 
   <section class="faq">
 
@@ -1268,19 +1247,22 @@
       <div class="faq-list">
 
         <details>
+
           <summary>
             What is The Home Rescue Book?
           </summary>
 
           <p>
-            It’s a digital guide with 50 practical solutions for everyday
-            home problems involving cleaning, stains, odors, kitchen,
-            bathroom, laundry and general home care.
+            It’s a digital guide with 50 practical solutions for everyday home
+            problems involving cleaning, stains, odors, kitchen, bathroom,
+            laundry and general home care.
           </p>
+
         </details>
 
 
         <details>
+
           <summary>
             How will I receive the book?
           </summary>
@@ -1289,10 +1271,12 @@
             You’ll receive digital access after purchase.
             The guide is provided as a PDF.
           </p>
+
         </details>
 
 
         <details>
+
           <summary>
             Can I read it on my phone?
           </summary>
@@ -1300,10 +1284,12 @@
           <p>
             Yes. The PDF can be read on a phone, tablet or computer.
           </p>
+
         </details>
 
 
         <details>
+
           <summary>
             Is this a physical book?
           </summary>
@@ -1311,31 +1297,35 @@
           <p>
             No. This is a digital PDF eBook.
           </p>
+
         </details>
 
 
         <details>
+
           <summary>
             Do I need special products or equipment?
           </summary>
 
           <p>
             The guide focuses on practical household solutions.
-            Always follow product labels and test any cleaning method
-            on a small, inconspicuous area first.
+            Always follow product labels and test any cleaning method on a
+            small, inconspicuous area first.
           </p>
+
         </details>
 
 
         <details>
+
           <summary>
             What if I don’t like it?
           </summary>
 
           <p>
-            You can request a refund within 30 days under the
-            money-back guarantee.
+            You can request a refund within 30 days under the money-back guarantee.
           </p>
+
         </details>
 
       </div>
@@ -1345,35 +1335,27 @@
   </section>
 
 
-  <!-- =========================
-       FINAL CTA
-       ========================= -->
-
   <section class="final" id="checkout">
 
     <div class="wrap final-grid">
 
+      <img
+        src="assets/book-stack-alt.png"
+        alt="The Home Rescue Book"
+      >
+
       <div>
 
-        <div class="eyebrow" style="color:#b9d6ca">
+        <div
+          class="eyebrow"
+          style="color:#b9d6ca"
+        >
           THE HOME RESCUE BOOK
         </div>
 
         <h2>
           Keep The Home Rescue Book Handy.
         </h2>
-
-      </div>
-
-
-      <!-- IMAGE BELOW TITLE -->
-      <img
-        src="assets/book-stack-alt.png"
-        alt="The Home Rescue Book"
-      >
-
-
-      <div>
 
         <p>
           Because the next time something goes wrong at home,
@@ -1385,6 +1367,7 @@
         </div>
 
         <!-- Replace # with your real checkout URL -->
+
         <a class="btn" href="#">
           GET THE HOME RESCUE BOOK $9.90
         </a>
@@ -1395,10 +1378,6 @@
 
   </section>
 
-
-  <!-- =========================
-       FOOTER
-       ========================= -->
 
   <footer>
 
