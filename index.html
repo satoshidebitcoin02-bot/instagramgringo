@@ -5,9 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>The Home Rescue Book — 50 Practical Home Fixes</title>
   <meta name="description" content="50 practical solutions for everyday home problems — cleaning, stains, odors, kitchen, bathroom, laundry and home care.">
+
+  <meta property="og:type" content="product">
+  <meta property="og:title" content="The Home Rescue Book — 50 Practical Home Fixes">
+  <meta property="og:description" content="50 practical solutions for everyday home problems — cleaning, stains, odors, kitchen, bathroom, laundry and home care.">
+  <meta property="og:image" content="assets/hero-home-rescue.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%97%3C/text%3E%3C/svg%3E">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "The Home Rescue Book",
+    "description": "50 practical solutions for everyday home problems — cleaning, stains, odors, kitchen, bathroom, laundry and home care.",
+    "image": "assets/hero-home-rescue.png",
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "USD",
+      "price": "9.90",
+      "availability": "https://schema.org/InStock"
+    }
+  }
+  </script>
 
   <style>
     :root{
@@ -37,6 +62,19 @@
       background:#fff;
       line-height:1.55;
       overflow-x:hidden;
+      text-align:center;
+    }
+
+    .product-grid > div,
+    .inside-card,
+    .faq-list,
+    .checklist,
+    .sticky-cta-inner{
+      text-align:center
+    }
+
+    summary{
+      text-align:left
     }
 
     img{
@@ -70,6 +108,20 @@
       grid-template-columns:1fr 1.08fr;
       gap:58px;
       align-items:center
+    }
+
+    .hero-copy{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      text-align:center
+    }
+
+    .hero-copy h1,
+    .hero-copy p,
+    .hero-copy .tags{
+      margin-left:auto;
+      margin-right:auto
     }
 
     .eyebrow{
@@ -146,15 +198,88 @@
       margin-top:10px
     }
 
+    a:focus-visible,
+    button:focus-visible,
+    summary:focus-visible{
+      outline:3px solid var(--gold);
+      outline-offset:2px
+    }
+
+    .trust-row{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:18px;
+      margin-top:16px;
+      font-size:13px;
+      color:var(--muted);
+      font-weight:600
+    }
+
+    .trust-row span{
+      display:inline-flex;
+      align-items:center;
+      gap:6px
+    }
+
+    .sticky-cta{
+      position:fixed;
+      left:0;
+      right:0;
+      bottom:0;
+      z-index:50;
+      background:#fff;
+      border-top:1px solid var(--line);
+      padding:12px 16px;
+      box-shadow:0 -8px 24px rgba(20,30,25,.12);
+      transform:translateY(120%);
+      transition:transform .25s ease;
+    }
+
+    .sticky-cta.show{
+      transform:translateY(0)
+    }
+
+    .sticky-cta-inner{
+      width:min(1080px,92%);
+      margin:auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px
+    }
+
+    .sticky-cta-copy{
+      font-family:'Libre Baskerville',Georgia,serif;
+      font-size:15px;
+      color:var(--ink)
+    }
+
+    .sticky-cta .btn{
+      padding:12px 22px;
+      animation:none;
+      white-space:nowrap
+    }
+
+    body{
+      padding-bottom:74px
+    }
+
+    .sticky-cta-copy{
+      display:none
+    }
+
+    .sticky-cta .btn{
+      width:100%
+    }
+
     @keyframes softPulse{
       0%,100%{
-        transform:scale(1);
         box-shadow:0 8px 22px rgba(22,76,60,.18)
       }
 
       50%{
-        transform:scale(1.018);
-        box-shadow:0 10px 26px rgba(22,76,60,.23)
+        box-shadow:0 10px 30px rgba(22,76,60,.32)
       }
     }
 
@@ -162,7 +287,9 @@
       border-radius:10px;
       overflow:hidden;
       box-shadow:0 22px 50px rgba(37,44,38,.16);
-      min-width:0
+      min-width:0;
+      max-width:520px;
+      margin:0 auto
     }
 
     .hero-image img{
@@ -193,10 +320,7 @@
     }
 
     .problem-grid{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:16px;
-      max-width:760px;
+      max-width:420px;
       margin:30px auto 0
     }
 
@@ -263,6 +387,11 @@
       align-items:center;
       max-width:880px;
       margin:auto
+    }
+
+    .inside-grid img{
+      max-width:420px;
+      margin:0 auto
     }
 
     .inside-card{
@@ -427,103 +556,87 @@
       opacity:.8
     }
 
-    @media(max-width:800px){
+    .hero-image-desktop{
+      display:none
+    }
 
-      .hero-image-desktop{
-        display:none
-      }
+    .hero-grid,
+    .product-grid,
+    .inside-grid,
+    .guarantee-inner,
+    .final-grid{
+      grid-template-columns:1fr;
+      gap:35px
+    }
 
-      .hero-grid,
-      .product-grid,
-      .inside-grid,
-      .guarantee-inner,
-      .final-grid{
-        grid-template-columns:1fr;
-        gap:35px
-      }
+    .hero{
+      padding:45px 0 55px
+    }
 
-      .hero{
-        padding:45px 0 55px
-      }
+    .hero-grid{
+      min-width:0
+    }
 
-      .hero-grid{
-        min-width:0
-      }
+    .hero-copy{
+      order:1;
+      min-width:0
+    }
 
-      .hero-copy{
-        order:1;
-        min-width:0
-      }
+    .hero-image-mobile{
+      display:block;
+      order:2;
+      margin:8px 0 18px
+    }
 
-      .hero-image-desktop{
-        order:2;
-        min-width:0
-      }
+    .hero-copy .btn{
+      order:3
+    }
 
-      .hero-image-mobile{
-        display:block;
-        order:2;
-        margin:8px 0 18px
-      }
+    .value-grid{
+      grid-template-columns:1fr
+    }
 
-      .hero-copy .btn{
-        order:3
-      }
+    .guarantee-inner{
+      justify-items:center;
+      text-align:center
+    }
 
-      .problem-grid{
-        grid-template-columns:1fr 1fr
-      }
+    .guarantee-inner div{
+      order:1
+    }
 
-      .value-grid{
-        grid-template-columns:1fr
-      }
+    .guarantee-inner img{
+      order:2
+    }
 
-      .guarantee-inner{
-        justify-items:center;
-        text-align:center
-      }
+    .final{
+      text-align:center
+    }
 
-      .guarantee-inner div{
-        order:1
-      }
+    .final-grid>div{
+      order:1
+    }
 
-      .guarantee-inner img{
-        order:2
-      }
+    .final-grid>img{
+      order:2
+    }
 
-      .final{
-        text-align:center
-      }
+    .final img{
+      max-width:360px
+    }
 
-      .final-grid>div{
-        order:1
-      }
+    .checklist{
+      grid-template-columns:1fr 1fr
+    }
 
-      .final-grid>img{
-        order:2
-      }
-
-      .final img{
-        max-width:360px
-      }
-
-      .checklist{
-        grid-template-columns:1fr 1fr
-      }
-
-      .inside-cta{
-        text-align:center
-      }
+    .inside-cta{
+      text-align:center
     }
 
     @media(max-width:480px){
 
       section{
         padding:58px 0
-      }
-
-      .problem-grid{
-        grid-template-columns:1fr
       }
 
       .checklist{
@@ -598,12 +711,19 @@
           GET THE HOME RESCUE BOOK $9.90
         </a>
 
+        <div class="trust-row">
+          <span>🔒 Secure checkout</span>
+          <span>⚡ Instant digital access</span>
+          <span>🔁 30-day guarantee</span>
+        </div>
+
       </div>
 
       <div class="hero-image hero-image-desktop">
         <img
           src="assets/hero-home-rescue.png"
-          alt="The Home Rescue Book with practical home solutions">
+          alt="The Home Rescue Book with practical home solutions"
+          fetchpriority="high">
       </div>
 
     </div>
@@ -628,7 +748,8 @@
       <div class="problem-grid">
         <img
           src="assets/problems-grid.png"
-          alt="Six everyday home problems covered in the guide">
+          alt="Six everyday home problems covered in the guide"
+          loading="lazy">
       </div>
 
       <p style="margin-top:28px;font-weight:700">
@@ -650,14 +771,15 @@
           A PRACTICAL REFERENCE GUIDE
         </div>
 
-        <h2>
+        <h2 style="text-align:center">
           Meet The Home Rescue Book
         </h2>
 
         <img
           class="product-image product-image-inline"
           src="assets/book-stack.png"
-          alt="The Home Rescue Book and stacked copies">
+          alt="The Home Rescue Book and stacked copies"
+          loading="lazy">
 
         <p>
           A practical collection of 50 simple home solutions designed to help
@@ -727,7 +849,8 @@
 
         <img
           src="assets/tablet-preview.png"
-          alt="The Home Rescue Book on a tablet and phone">
+          alt="The Home Rescue Book on a tablet and phone"
+          loading="lazy">
 
       </div>
 
@@ -812,7 +935,8 @@
 
       <img
         src="assets/guarantee.png"
-        alt="30-day money-back guarantee">
+        alt="30-day money-back guarantee"
+        loading="lazy">
 
       <div>
 
@@ -910,7 +1034,8 @@
 
       <img
         src="assets/book-stack-alt.png"
-        alt="The Home Rescue Book">
+        alt="The Home Rescue Book"
+        loading="lazy">
 
       <div>
 
@@ -961,6 +1086,29 @@
     </div>
 
   </footer>
+
+  <div class="sticky-cta" id="stickyCta">
+    <div class="sticky-cta-inner">
+      <span class="sticky-cta-copy">The Home Rescue Book — 50 Practical Home Fixes</span>
+      <a class="btn" href="link_do_checkout_aqui">
+        GET THE HOME RESCUE BOOK $9.90
+      </a>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      var bar = document.getElementById('stickyCta');
+      var hero = document.querySelector('.hero');
+      if(!bar || !hero) return;
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          bar.classList.toggle('show', !entry.isIntersecting);
+        });
+      });
+      io.observe(hero);
+    })();
+  </script>
 
 </body>
 </html>
