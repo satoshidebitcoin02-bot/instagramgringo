@@ -416,6 +416,98 @@
       text-align:center
     }
 
+    .sample{
+      background:#fff
+    }
+
+    .sample-grid{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:24px;
+      margin-top:34px
+    }
+
+    .sample-card{
+      text-align:left;
+      max-width:480px;
+      width:100%;
+      border:1px solid var(--line);
+      border-radius:10px;
+      overflow:hidden;
+      background:#fff;
+      box-shadow:0 10px 30px rgba(20,30,25,.06)
+    }
+
+    .sample-card-title{
+      background:var(--green);
+      color:#fff;
+      font-family:'Libre Baskerville',Georgia,serif;
+      font-size:17px;
+      padding:14px 18px
+    }
+
+    .sample-meta{
+      padding:14px 18px 0;
+      font-size:13px;
+      color:var(--muted)
+    }
+
+    .sample-need{
+      margin:14px 18px;
+      background:#eef3ef;
+      border-radius:8px;
+      padding:12px 14px;
+      font-size:13px
+    }
+
+    .sample-steps{
+      margin:0 18px;
+      padding:0;
+      list-style:none;
+      counter-reset:step
+    }
+
+    .sample-steps li{
+      counter-increment:step;
+      padding:10px 0 10px 34px;
+      position:relative;
+      border-top:1px solid var(--line);
+      font-size:14px
+    }
+
+    .sample-steps li:before{
+      content:counter(step);
+      position:absolute;
+      left:0;
+      top:10px;
+      width:22px;
+      height:22px;
+      border-radius:50%;
+      background:var(--green);
+      color:#fff;
+      font-size:12px;
+      font-weight:800;
+      display:grid;
+      place-items:center
+    }
+
+    .sample-tip{
+      margin:14px 18px;
+      background:#f3ead9;
+      border-radius:8px;
+      padding:10px 14px;
+      font-size:13px
+    }
+
+    .sample-safety{
+      margin:14px 18px 18px;
+      background:#e7eef5;
+      border-radius:8px;
+      padding:10px 14px;
+      font-size:13px
+    }
+
     .value{
       background:var(--cream)
     }
@@ -707,7 +799,7 @@
             alt="The Home Rescue Book with practical home solutions">
         </div>
 
-        <a class="btn" href="link_do_checkout_aqui">
+        <a class="btn" href="https://buy.stripe.com/test_9B64gB5YIclv6Mm7Df7IY00">
           GET THE HOME RESCUE BOOK $9.90
         </a>
 
@@ -793,14 +885,14 @@
 
         <div class="checklist">
 
-          <div class="check">Cleaning solutions</div>
-          <div class="check">Stain removal</div>
-          <div class="check">Odor control</div>
-          <div class="check">Kitchen problems</div>
-          <div class="check">Bathroom cleaning</div>
-          <div class="check">Laundry fixes</div>
-          <div class="check">Everyday home care</div>
-          <div class="check">Simple household tricks</div>
+          <div class="check">Remove soap scum from shower doors</div>
+          <div class="check">Treat a fresh coffee stain on a shirt</div>
+          <div class="check">Deodorize a smelly refrigerator</div>
+          <div class="check">Loosen baked-on food from a pan</div>
+          <div class="check">Stop a squeaky door in minutes</div>
+          <div class="check">Freshen a musty closet naturally</div>
+          <div class="check">Lift candle wax off a hard surface</div>
+          <div class="check">Reset a cluttered entryway in 10 minutes</div>
 
         </div>
 
@@ -856,9 +948,77 @@
 
       <!-- NOVO BOTÃO ABAIXO DA FOTO -->
       <div class="inside-cta">
-        <a class="btn" href="link_do_checkout_aqui">
+        <a class="btn" href="https://buy.stripe.com/test_9B64gB5YIclv6Mm7Df7IY00">
           GET THE HOME RESCUE BOOK $9.90
         </a>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section class="sample">
+
+    <div class="wrap center">
+
+      <h2>
+        See a Real Page from the Book
+      </h2>
+
+      <p class="section-lead">
+        No filler, no theory — just the exact format used for every one of the
+        50 fixes inside.
+      </p>
+
+      <div class="sample-grid">
+
+        <div class="sample-card">
+
+          <div class="sample-card-title">01 Remove Soap Scum from Shower Doors</div>
+
+          <p class="sample-meta">Bathroom • A simple reset for cloudy glass covered with soap residue.</p>
+
+          <div class="sample-need">
+            <strong>What you'll need:</strong> White vinegar • Dish soap • Warm water • Microfiber cloth • Squeegee
+          </div>
+
+          <ol class="sample-steps">
+            <li>Mix equal parts warm water and white vinegar with a small amount of dish soap.</li>
+            <li>Apply to the glass and let it sit for a few minutes.</li>
+            <li>Wipe with a microfiber cloth.</li>
+            <li>Rinse well and dry with a squeegee or clean cloth.</li>
+          </ol>
+
+          <div class="sample-tip"><strong>PRO TIP</strong> — Dry the glass after showers whenever possible.</div>
+
+          <div class="sample-safety"><strong>SAFETY NOTE</strong> — Never combine vinegar with bleach or other chlorine products.</div>
+
+        </div>
+
+        <div class="sample-card">
+
+          <div class="sample-card-title">15 Refresh a Smelly Microwave</div>
+
+          <p class="sample-meta">Kitchen • Remove everyday food odors and residue from the microwave.</p>
+
+          <div class="sample-need">
+            <strong>What you'll need:</strong> Microwave-safe bowl • Water • Lemon
+          </div>
+
+          <ol class="sample-steps">
+            <li>Add water and a few lemon slices to a microwave-safe bowl.</li>
+            <li>Heat until the water is steaming.</li>
+            <li>Let it sit closed for a few minutes.</li>
+            <li>Wipe the interior with a clean cloth.</li>
+          </ol>
+
+          <div class="sample-tip"><strong>PRO TIP</strong> — Wipe spills soon after they happen.</div>
+
+          <div class="sample-safety"><strong>SAFETY NOTE</strong> — Use only microwave-safe containers and follow your appliance instructions.</div>
+
+        </div>
+
       </div>
 
     </div>
@@ -1056,7 +1216,11 @@
           $9.90
         </div>
 
-        <a class="btn" href="link_do_checkout_aqui">
+        <p class="sub" style="color:#b9d6ca;margin-top:-14px;margin-bottom:20px">
+          Less than a takeout coffee — for 50 fixes you'll use for years.
+        </p>
+
+        <a class="btn" href="https://buy.stripe.com/test_9B64gB5YIclv6Mm7Df7IY00">
           GET THE HOME RESCUE BOOK $9.90
         </a>
 
@@ -1090,7 +1254,7 @@
   <div class="sticky-cta" id="stickyCta">
     <div class="sticky-cta-inner">
       <span class="sticky-cta-copy">The Home Rescue Book — 50 Practical Home Fixes</span>
-      <a class="btn" href="link_do_checkout_aqui">
+      <a class="btn" href="https://buy.stripe.com/test_9B64gB5YIclv6Mm7Df7IY00">
         GET THE HOME RESCUE BOOK $9.90
       </a>
     </div>
